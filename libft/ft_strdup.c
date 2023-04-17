@@ -6,41 +6,25 @@
 /*   By: rafamart <rafamart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 21:24:32 by rafamart          #+#    #+#             */
-/*   Updated: 2023/04/17 21:30:23 by rafamart         ###   ########.fr       */
+/*   Updated: 2023/04/17 21:34:39 by rafamart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-int	ft_str_length(char *str)
-{
-	int	index;
-
-	index = 0;
-	while (str[index])
-		index++;
-	return (index);
-}
+#include "libft.h"
 
 char	*ft_strdup(char *src)
 {
-	int		index;
-	char	*dest;
-	char	*d;
+	char	*dup;
+	int		i;
 
-	index = 0;
-	d = ((dest = (char *)malloc(ft_str_length(src) * sizeof(char) + 1)));
-	if (!d)
-	{
+	i = -1;
+	dup = malloc(sizeof(char) * (ft_strlen(src) + 1));
+	if (dup == NULL)
 		return (0);
-	}
-	while (src[index])
-	{
-		dest[index] = src[index];
-		index++;
-	}
-	dest[index] = '\0';
-	return (dest);
+	while (src[++i])
+		dup[i] = src[i];
+	dup[i] = '\0';
+	return (dup);
 }
 
 // int		main(void)
