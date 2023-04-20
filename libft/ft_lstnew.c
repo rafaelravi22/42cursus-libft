@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rafamart <rafamart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/12 16:51:34 by rafamart          #+#    #+#             */
-/*   Updated: 2023/04/20 21:49:31 by rafamart         ###   ########.fr       */
+/*   Created: 2023/04/20 19:58:08 by rafamart          #+#    #+#             */
+/*   Updated: 2023/04/20 20:00:07 by rafamart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <stdio.h>
-# include <stdlib.h>
-
-typedef struct s_list
+t_list	*ft_lstnew(void *content)
 {
-	void			*content;
-	struct s_list	*next;
-}					t_list;
+	t_list	*new_node;
 
-#endif
+	new_node = (t_list *)malloc(sizeof(t_list));
+	if (!new_node)
+		return (NULL);
+	new_node->content = content;
+	new_node->next = NULL;
+	return (new_node);
+}

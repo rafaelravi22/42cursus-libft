@@ -1,25 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rafamart <rafamart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/12 16:51:34 by rafamart          #+#    #+#             */
-/*   Updated: 2023/04/20 21:49:31 by rafamart         ###   ########.fr       */
+/*   Created: 2023/04/20 18:03:51 by rafamart          #+#    #+#             */
+/*   Updated: 2023/04/20 18:11:02 by rafamart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <stdio.h>
-# include <stdlib.h>
-
-typedef struct s_list
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	void			*content;
-	struct s_list	*next;
-}					t_list;
+	unsigned int	i;
+	char			*str;
 
-#endif
+	if (!s)
+		return (NULL);
+	i = 0;
+	str = (char *)malloc(sizeof(char) * len + 1);
+	if (str == NULL)
+		return (NULL);
+	while (i < len)
+	{
+		str[i] = s[start + i];
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
+}

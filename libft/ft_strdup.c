@@ -6,7 +6,7 @@
 /*   By: rafamart <rafamart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 21:24:32 by rafamart          #+#    #+#             */
-/*   Updated: 2023/04/17 21:34:39 by rafamart         ###   ########.fr       */
+/*   Updated: 2023/04/20 20:41:39 by rafamart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,15 @@ char	*ft_strdup(char *src)
 	char	*dup;
 	int		i;
 
-	i = -1;
+	i = 0;
 	dup = malloc(sizeof(char) * (ft_strlen(src) + 1));
 	if (dup == NULL)
 		return (0);
-	while (src[++i])
+	while (src[i])
+	{
 		dup[i] = src[i];
+		i++;
+	}
 	dup[i] = '\0';
 	return (dup);
 }

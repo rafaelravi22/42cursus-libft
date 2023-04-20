@@ -1,23 +1,37 @@
+SRCFILES	=	
+
+
+OBJ = $(SRCFILES:.c = .o)
+
+SRCFILESBONUS	=
+
+OBJBONUS = $(SRCFILESBONUS:.c = .o)
+
+NAME	= libft.a
+
 COMPILER = cc
+
 FLAGS = -Wall -Wextra -Werror
+
 RM = rm -f
 
-NAME = libft.a
-
-SRC = 
-
-OBJ = $(SRC:.c = .o)
+.PHONY: all, bonus, clean, fclean, re
 
 all:$(NAME)
 
-$(NAME): $(OBJ)
-	$(COMPILER) $(FLAGS) -O $@ $^
+$(NAME) : $(OBJ)
+ ar ac $(NAME) $(OBJ)
+ RANLIB $(NAME)
+	
+BONUS : $(OJT) $(OBJBONUS)
+	ar rc $(NAME) $(OBJBONUS) $(OBJ)
+	ranlib $(NAME)
 
 -%.o: &.c
 	$(COMPILER) $(FLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJ)
+	$(RM) $(OBJ) $(OBJBONUS)
 
 fclean: clean
 	$(RM) $(NAME)

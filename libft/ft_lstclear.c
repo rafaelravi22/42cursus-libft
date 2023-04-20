@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rafamart <rafamart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/12 16:51:34 by rafamart          #+#    #+#             */
-/*   Updated: 2023/04/20 21:49:31 by rafamart         ###   ########.fr       */
+/*   Created: 2023/04/20 21:08:34 by rafamart          #+#    #+#             */
+/*   Updated: 2023/04/20 21:26:12 by rafamart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-# include <stdio.h>
-# include <stdlib.h>
-
-typedef struct s_list
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	void			*content;
-	struct s_list	*next;
-}					t_list;
+	t_list	*suc;
 
-#endif
+	if (!lst || !del)
+		return (NULL);
+	while (*lst)
+	{
+		suc = (*lst)->next;
+		ft_lstdelone(*lst, del);
+		*lst = suc;
+	}
+}
