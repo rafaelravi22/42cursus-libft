@@ -6,7 +6,7 @@
 /*   By: rafamart <rafamart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 17:39:23 by rafamart          #+#    #+#             */
-/*   Updated: 2023/04/17 19:40:31 by rafamart         ###   ########.fr       */
+/*   Updated: 2023/04/24 14:03:41 by rafamart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,17 +24,3 @@ void	*ft_memset(void *s, int c, size_t n)
 	}	
 	return (s);
 }
-
-// void	*ft_memset(void *b, int c, size_t len)
-// {
-// 	char *p;
-
-// 	p = (char *)b;
-// 	while (len > 0)
-// 	{
-// 		*p = c;
-// 		p++;
-// 		len--;
-// 	}
-// 	return (b);
-// }

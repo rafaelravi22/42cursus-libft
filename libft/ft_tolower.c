@@ -6,13 +6,13 @@
 /*   By: rafamart <rafamart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 18:18:18 by rafamart          #+#    #+#             */
-/*   Updated: 2023/04/17 17:44:44 by rafamart         ###   ########.fr       */
+/*   Updated: 2023/04/24 15:51:00 by rafamart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_toupper(int c)
+int	ft_tolower(int c)
 {
-	if (c >= 'a' && c <= 'z')
+	if (c >= 'A' && c <= 'Z')
 		return (c += 32);
 	else
 		return (c);

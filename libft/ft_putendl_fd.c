@@ -6,7 +6,7 @@
 /*   By: rafamart <rafamart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 17:57:48 by rafamart          #+#    #+#             */
-/*   Updated: 2023/04/20 18:16:01 by rafamart         ###   ########.fr       */
+/*   Updated: 2023/04/24 15:37:07 by rafamart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	ft_putstr(s, fd);
-	ft_putchar('\n', fd);
+	ft_putstr_fd(s, fd);
+	ft_putchar_fd('\n', fd);
 }

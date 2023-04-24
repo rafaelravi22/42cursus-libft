@@ -6,7 +6,7 @@
 /*   By: rafamart <rafamart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 18:01:13 by rafamart          #+#    #+#             */
-/*   Updated: 2023/04/17 18:35:35 by rafamart         ###   ########.fr       */
+/*   Updated: 2023/04/24 14:04:30 by rafamart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,16 +33,3 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t n)
 	}
 	return (0);
 }
-
-// #include <stdio.h>
-
-// int main () 
-// {
-// const char str[20] = "TutorialsPoint";
-// const char to_find[10] = "";
-// char *result;
-
-// result = ft_strnstr(str, to_find, 20);
-// printf("The substring is: %s\n", result);
-// return(0);
-// }

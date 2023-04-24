@@ -6,7 +6,7 @@
 /*   By: rafamart <rafamart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 21:15:23 by rafamart          #+#    #+#             */
-/*   Updated: 2023/04/20 21:26:25 by rafamart         ###   ########.fr       */
+/*   Updated: 2023/04/24 16:47:29 by rafamart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	if (!lst || !f)
-		return (NULL);
+		return ;
 	while (lst)
 	{
 		f(lst->content);

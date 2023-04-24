@@ -6,7 +6,7 @@
 /*   By: rafamart <rafamart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 21:08:34 by rafamart          #+#    #+#             */
-/*   Updated: 2023/04/20 21:26:12 by rafamart         ###   ########.fr       */
+/*   Updated: 2023/04/24 16:31:04 by rafamart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*suc;
 
 	if (!lst || !del)
-		return (NULL);
+		return ;
 	while (*lst)
 	{
 		suc = (*lst)->next;

@@ -6,9 +6,11 @@
 /*   By: rafamart <rafamart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 17:16:51 by rafamart          #+#    #+#             */
-/*   Updated: 2023/04/17 17:46:11 by rafamart         ###   ########.fr       */
+/*   Updated: 2023/04/24 15:11:21 by rafamart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {

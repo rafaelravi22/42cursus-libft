@@ -6,7 +6,7 @@
 /*   By: rafamart <rafamart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/17 20:29:33 by rafamart          #+#    #+#             */
-/*   Updated: 2023/04/17 20:33:22 by rafamart         ###   ########.fr       */
+/*   Updated: 2023/04/24 14:10:01 by rafamart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,16 +27,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (NULL);
 }
-
-// int main () 
-// {
-//   const char str[] = "http://www.tutorialspoint.com";
-//   const char ch = 'n';
-//   char *result;
-
-//   result = ft_memchr(str, ch, 50);
-
-//   printf("String after character is %s\n", result);
-
-//   return(0);
-// }

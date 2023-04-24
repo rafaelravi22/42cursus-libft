@@ -6,7 +6,7 @@
 /*   By: rafamart <rafamart@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/18 17:37:01 by rafamart          #+#    #+#             */
-/*   Updated: 2023/04/18 18:07:54 by rafamart         ###   ########.fr       */
+/*   Updated: 2023/04/24 15:39:17 by rafamart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	if (n < 0)
 	{
-		ft_putchar_fd('-');
+		ft_putchar_fd('-', fd);
 		n = -n;
 	}
 	if (n >= 10)
 	{
-		ft_putnbr(n / 10, fd);
-		ft_putnbr(n % 10, fd);
+		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(n % 10, fd);
 	}
 	else
 	{
